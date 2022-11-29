@@ -49,87 +49,6 @@ public class Sudoku {
         this.grid_status = true;
     }
 
-    public Sudoku(String grid_str, boolean row_major) {
-        this.grid = new int[9][9];
-        this.solnGrid = new int[9][9];
-        this.guessNum = new int[9];
-        this.gridPos = new int[81];
-        this.difficultyLevel = 0;
-
-        this.util = new Util();
-
-        if (grid_str.length() != 81) {
-            this.grid_status = false;
-            return;
-        }
-
-        // First pass: Check if all cells are valid
-        for (int i = 0; i < 81; ++i) {
-            int curr_num = grid_str.charAt(i) - '0';
-            if (!((curr_num == UNASSIGNED) || (curr_num > 0 && curr_num < 10))) {
-                this.grid_status = false;
-                return;
-            }
-
-            if (row_major) this.grid[i / 9][i % 9] = curr_num;
-            else this.grid[i % 9][i / 9] = curr_num;
-        }
-
-        // Second pass: Check if all columns are valid
-        for (int col_num = 0; col_num < 9; ++col_num) {
-            boolean[] nums = new boolean[10];
-            for (int i = 0; i < 10; i++) nums[i] = false;
-
-            for (int row_num = 0; row_num < 9; ++row_num) {
-                int curr_num = grid[row_num][col_num];
-                if (curr_num != UNASSIGNED && nums[curr_num]) {
-                    this.grid_status = false;
-                    return;
-                }
-                nums[curr_num] = true;
-            }
-        }
-
-        // Third pass: Check if all rows are valid
-        for (int row_num = 0; row_num < 9; ++row_num) {
-            boolean[] nums = new boolean[10];
-            for (int i = 0; i < 10; i++) nums[i] = false;
-
-            for (int col_num = 0; col_num < 9; ++col_num) {
-                int curr_num = grid[row_num][col_num];
-                if (curr_num != UNASSIGNED && nums[curr_num]) {
-                    this.grid_status = false;
-                    return;
-                }
-                nums[curr_num] = true;
-            }
-        }
-
-        // Fourth pass: Check if all blocks are valid
-        for (int block_num = 0; block_num < 9; ++block_num) {
-            boolean[] nums = new boolean[10];
-            for (int i = 0; i < 10; i++) nums[i] = false;
-
-            for (int cell_num = 0; cell_num < 9; ++cell_num) {
-                int curr_num = grid[((block_num / 3)) * 3 + (cell_num / 3)][((block_num % 3)) * 3 + (cell_num % 3)];
-                if (curr_num != UNASSIGNED && nums[curr_num]) {
-                    this.grid_status = false;
-                    return;
-                }
-                nums[curr_num] = true;
-            }
-        }
-
-        // Randomly shuffling the guessing number array
-        for (int i = 0; i < 9; i++) {
-            this.guessNum[i] = i + 1;
-        }
-
-        util.random_shuffle(this.guessNum);
-
-        this.grid_status = true;
-    }
-
     public boolean FindUnassignedLocation() {
         for (this.row = 0; this.row < 9; this.row++) {
             for (this.col = 0; this.col < 9; this.col++) {
@@ -312,5 +231,15 @@ public class Sudoku {
         }
 
         return sum;
+    }
+
+    public void reset(){
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                this.grid[i][j] = 0;
+            }
+        }
+        this.createSeed();
+        this.genPuzzle();
     }
 }

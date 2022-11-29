@@ -22,18 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         this.textViewsGrid = new ArrayList<>();
 
-        initialize();
-    }
-
-    public void onClick(View v) {
-        Toast.makeText(getApplicationContext(), v.getId() + " clicked", Toast.LENGTH_SHORT).show();
-    }
-
-    public void initialize() {
-        board = new Sudoku();
-        board.createSeed();
-        board.genPuzzle();
-
         textViewsGrid.add(findViewById(R.id.text_view_1_1));
         textViewsGrid.add(findViewById(R.id.text_view_1_2));
         textViewsGrid.add(findViewById(R.id.text_view_1_3));
@@ -115,6 +103,28 @@ public class MainActivity extends AppCompatActivity {
         textViewsGrid.add(findViewById(R.id.text_view_9_7));
         textViewsGrid.add(findViewById(R.id.text_view_9_8));
         textViewsGrid.add(findViewById(R.id.text_view_9_9));
+
+        initialize();
+    }
+
+    public void onClick(View v) {
+        Toast.makeText(getApplicationContext(), v.getId() + " clicked", Toast.LENGTH_SHORT).show();
+    }
+
+    public void resetBoard(View v){
+        board.reset();
+        for (int i = 0; i < textViewsGrid.size(); i++) {
+            int row = i / 9;
+            int col = i % 9;
+            Log.i("RC", row + " " + col);
+            textViewsGrid.get(i).setText(Integer.toString(board.getGrid()[row][col]));
+        }
+    }
+
+    public void initialize() {
+        board = new Sudoku();
+        board.createSeed();
+        board.genPuzzle();
 
         for (int i = 0; i < textViewsGrid.size(); i++) {
             int row = i / 9;
