@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_view_1_1"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_1_2"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_1_3"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_1_4"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_1_5"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_1_6"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_1_7"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_1_8"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_1_9"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_view_2_1"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_2_2"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_2_3"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_2_4"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_2_5"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_2_6"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_2_7"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_2_8"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_2_9"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_view_3_1"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_3_2"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_3_3"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_3_4"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_3_5"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_3_6"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_3_7"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_3_8"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_3_9"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_view_4_1"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_4_2"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_4_3"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_4_4"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_4_5"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_4_6"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_4_7"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_4_8"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_4_9"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_view_5_1"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_5_2"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_5_3"
+                android:layout_width="wrap_content"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_5_4"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_5_5"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_5_6"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_5_7"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_5_8"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_5_9"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_view_6_1"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_6_2"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_6_3"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_6_4"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_6_5"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_6_6"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_6_7"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_6_8"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_6_9"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_view_7_1"
+                android:layout_width="wrap_content"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_7_2"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_7_3"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_7_4"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_7_5"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_7_6"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_7_7"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_7_8"
+                android:layout_width="wrap_content"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_7_9"
+                android:layout_width="wrap_content"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_view_8_1"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_8_2"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_8_3"
+                android:layout_width="wrap_content"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_8_4"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_8_5"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_8_6"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_8_7"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_8_8"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_8_9"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_view_9_1"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_9_2"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_9_3"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_9_4"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_9_5"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_9_6"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_9_7"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_9_8"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/text_view_9_9"
+                android:width="30dp"
+                android:height="30dp"
+                android:background="@drawable/tile_background"
+                android:onClick="onClick" />
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
