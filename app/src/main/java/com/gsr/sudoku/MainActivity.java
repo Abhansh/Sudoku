@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,12 +15,14 @@ public class MainActivity extends AppCompatActivity {
 
     Sudoku board;
     ArrayList<TextView> textViewsGrid;
+    TextView selectedTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        this.selectedTextView = null;
         this.textViewsGrid = new ArrayList<>();
 
         textViewsGrid.add(findViewById(R.id.text_view_1_1));
@@ -108,7 +111,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        Toast.makeText(getApplicationContext(), v.getId() + " clicked", Toast.LENGTH_SHORT).show();
+        this.selectedTextView = findViewById(v.getId());
+        if (this.selectedTextView.isClickable())
+            Toast.makeText(getApplicationContext(), v.getId() + " clicked", Toast.LENGTH_SHORT).show();
+        else
+            this.selectedTextView = null;
+    }
+
+    public void numberClick(View v){
+        if (this.selectedTextView == null) {
+            Toast.makeText(getApplicationContext(),  "please select a position on the board", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Button button = findViewById(v.getId());
+        this.selectedTextView.setText(button.getText());
+        this.selectedTextView = null;
+        Toast.makeText(getApplicationContext(), button.getText() + " clicked", Toast.LENGTH_SHORT).show();
     }
 
     public void resetBoard(View v){
@@ -118,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
             int col = i % 9;
             Log.i("RC", row + " " + col);
             textViewsGrid.get(i).setText(Integer.toString(board.getGrid()[row][col]));
+            textViewsGrid.get(i).setClickable(true);
         }
     }
 
@@ -131,6 +150,8 @@ public class MainActivity extends AppCompatActivity {
             int col = i % 9;
             Log.i("RC", row + " " + col);
             textViewsGrid.get(i).setText(Integer.toString(board.getGrid()[row][col]));
+            if (board.getGrid()[row][col] != 0)
+                textViewsGrid.get(i).setClickable(false);
         }
     }
 
