@@ -12,11 +12,10 @@
         android:layout_height="wrap_content"
         android:columnCount="9"
         android:rowCount="9"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/number_pad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/text_view_1_1"
@@ -682,6 +681,7 @@
         app:layout_constraintVertical_bias="0.050000012" />
 
     <GridLayout
+        android:id="@+id/number_pad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="9"

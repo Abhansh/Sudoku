@@ -5,7 +5,7 @@ import java.util.Random;
 public class Util {
 
     boolean UsedInCol(int[][] grid, int col, int num) {
-        for (int row = 0; row < 9; row++) {
+        for (int row = 0; row < grid.length; row++) {
             if (grid[row][col] == num)
                 return true;
         }
@@ -14,8 +14,8 @@ public class Util {
     }
 
     boolean UsedInBox(int[][] grid, int boxStartRow, int boxStartCol, int num) {
-        for (int row = 0; row < 3; row++) {
-            for (int col = 0; col < 3; col++) {
+        for (int row = 0; row < grid.length; row++) {
+            for (int col = 0; col < grid[row].length; col++) {
                 if (grid[row + boxStartRow][col + boxStartCol] == num)
                     return true;
             }
@@ -36,12 +36,12 @@ public class Util {
     }
 
     public boolean isSafe(int[][] grid, int row, int col, int num) {
-        return !UsedInRow(grid, row, num) && !UsedInCol(grid, col, num) && !UsedInBox(grid, row - row % 3, col - col % 3, num);
+        return !UsedInRow(grid, row, num) && !UsedInCol(grid, col, num) && !UsedInBox(grid, row - row % 2, col - col % 2, num);
     }
 
 
     public boolean UsedInRow(int[][] grid, int row, int num) {
-        for (int col = 0; col < 9; col++) {
+        for (int col = 0; col < grid.length; col++) {
             if (grid[row][col] == num)
                 return true;
         }

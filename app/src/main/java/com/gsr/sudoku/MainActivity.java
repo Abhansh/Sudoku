@@ -131,26 +131,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void resetBoard(View v){
         board.reset();
-        for (int i = 0; i < textViewsGrid.size(); i++) {
-            int row = i / 9;
-            int col = i % 9;
+        for (int i = 0; i < board.getGridSize()*board.getGridSize(); i++) {
+            int row = i / board.getGridSize();
+            int col = i % board.getGridSize();
             Log.i("RC", row + " " + col);
-            textViewsGrid.get(i).setText(Integer.toString(board.getGrid()[row][col]));
+            textViewsGrid.get(i).setText(String.valueOf(board.getGrid()[row][col]));
             textViewsGrid.get(i).setClickable(true);
         }
     }
 
     public void initialize() {
-        board = new Sudoku();
+        board = new Sudoku(9);
         board.createSeed();
-        board.genPuzzle();
 
-        for (int i = 0; i < textViewsGrid.size(); i++) {
-            int row = i / 9;
-            int col = i % 9;
+        for (int i = 0; i < board.getGridSize()*board.getGridSize(); i++) {
+            int row = i / board.getGridSize();
+            int col = i % board.getGridSize();
             Log.i("RC", row + " " + col);
-            textViewsGrid.get(i).setText(Integer.toString(board.getGrid()[row][col]));
-            if (board.getGrid()[row][col] != 0)
+            textViewsGrid.get(i).setText(String.valueOf(board.getGrid()[row][col]));
+            if (board.getGrid()[row][col] != ' ')
                 textViewsGrid.get(i).setClickable(false);
         }
     }
