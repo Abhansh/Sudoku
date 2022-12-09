@@ -131,26 +131,28 @@ public class MainActivity extends AppCompatActivity {
 
     public void resetBoard(View v){
         board.reset();
+        board.createGame();
         for (int i = 0; i < board.getGridSize()*board.getGridSize(); i++) {
             int row = i / board.getGridSize();
             int col = i % board.getGridSize();
-            Log.i("RC", row + " " + col);
-            textViewsGrid.get(i).setText(String.valueOf(board.getGrid()[row][col]));
+            if (board.getGrid()[row][col] != 0)
+                textViewsGrid.get(i).setText(String.valueOf(board.getGrid()[row][col]));
+            else
+                textViewsGrid.get(i).setText(" ");
             textViewsGrid.get(i).setClickable(true);
         }
     }
 
     public void initialize() {
         board = new Sudoku(9);
-        board.createSeed();
-
+        board.createGame();
         for (int i = 0; i < board.getGridSize()*board.getGridSize(); i++) {
             int row = i / board.getGridSize();
             int col = i % board.getGridSize();
-            Log.i("RC", row + " " + col);
-            textViewsGrid.get(i).setText(String.valueOf(board.getGrid()[row][col]));
-            if (board.getGrid()[row][col] != ' ')
+            if (board.getGrid()[row][col] != 0) {
+                textViewsGrid.get(i).setText(String.valueOf(board.getGrid()[row][col]));
                 textViewsGrid.get(i).setClickable(false);
+            }
         }
     }
 
