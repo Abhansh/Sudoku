@@ -2,6 +2,8 @@ package com.gsr.sudoku;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -111,11 +113,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        this.selectedTextView = findViewById(v.getId());
-        if (this.selectedTextView.isClickable())
-            Toast.makeText(getApplicationContext(), v.getId() + " clicked", Toast.LENGTH_SHORT).show();
-        else
-            this.selectedTextView = null;
+        TextView clickedTextView = findViewById(v.getId());
+        if (clickedTextView.isClickable()){
+            if (this.selectedTextView != null){
+                this.selectedTextView.setBackgroundColor(0x00FFFFFF);
+            }
+            this.selectedTextView = clickedTextView;
+            this.selectedTextView.setBackgroundColor(getResources().getColor(R.color.highlight));
+        }
     }
 
     public void numberClick(View v){
@@ -125,21 +130,27 @@ public class MainActivity extends AppCompatActivity {
         }
         Button button = findViewById(v.getId());
         this.selectedTextView.setText(button.getText());
+        this.selectedTextView.setBackgroundColor(0x00FFFFFF);
         this.selectedTextView = null;
-        Toast.makeText(getApplicationContext(), button.getText() + " clicked", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(), button.getText() + " clicked", Toast.LENGTH_SHORT).show();
     }
 
     public void resetBoard(View v){
         board.reset();
         board.createGame();
         for (int i = 0; i < board.getGridSize()*board.getGridSize(); i++) {
+            textViewsGrid.get(i).setText(" ");
+            textViewsGrid.get(i).setClickable(true);
+            textViewsGrid.get(i).setTypeface(textViewsGrid.get(i).getTypeface(), Typeface.NORMAL);
+        }
+        for (int i = 0; i < board.getGridSize()*board.getGridSize(); i++) {
             int row = i / board.getGridSize();
             int col = i % board.getGridSize();
-            if (board.getGrid()[row][col] != 0)
+            if (board.getGrid()[row][col] != 0) {
                 textViewsGrid.get(i).setText(String.valueOf(board.getGrid()[row][col]));
-            else
-                textViewsGrid.get(i).setText(" ");
-            textViewsGrid.get(i).setClickable(true);
+                textViewsGrid.get(i).setTypeface(textViewsGrid.get(i).getTypeface(), Typeface.BOLD);
+                textViewsGrid.get(i).setClickable(false);
+            }
         }
     }
 
@@ -150,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
             int row = i / board.getGridSize();
             int col = i % board.getGridSize();
             if (board.getGrid()[row][col] != 0) {
+                textViewsGrid.get(i).setTypeface(textViewsGrid.get(i).getTypeface(), Typeface.BOLD);
                 textViewsGrid.get(i).setText(String.valueOf(board.getGrid()[row][col]));
                 textViewsGrid.get(i).setClickable(false);
             }

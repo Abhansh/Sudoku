@@ -127,7 +127,7 @@ public class Sudoku {
             }
         }
 
-        for (int i = 0; i < 31; i++) {
+        for (int i = 0; i < 36; i++) {
             int row = random.nextInt(this.GRID_SIZE);
             int col = random.nextInt(this.GRID_SIZE);
             while (!(this.grid[row][col] == 0)) {

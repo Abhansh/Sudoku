@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Abhansh/SW/programs/android/Sudoku/app/src/main/res/drawable/background_grid.xml" value="0.3585" />
+        <entry key="..\:/Abhansh/SW/programs/android/Sudoku/app/src/main/res/drawable/ic_background_grid.xml" value="0.3585" />
         <entry key="..\:/Abhansh/SW/programs/android/Sudoku/app/src/main/res/drawable/left_border.xml" value="0.1" />
         <entry key="..\:/Abhansh/SW/programs/android/Sudoku/app/src/main/res/drawable/tile_background.xml" value="0.14" />
         <entry key="..\:/Abhansh/SW/programs/android/Sudoku/app/src/main/res/layout/activity_main.xml" value="0.33" />
