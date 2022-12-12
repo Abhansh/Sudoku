@@ -1,9 +1,11 @@
 package com.gsr.sudoku;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<TextView> textViewsGrid;
     TextView selectedTextView;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,25 +138,27 @@ public class MainActivity extends AppCompatActivity {
 //        Toast.makeText(getApplicationContext(), button.getText() + " clicked", Toast.LENGTH_SHORT).show();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public void resetBoard(View v){
         board.reset();
         board.createGame();
         for (int i = 0; i < board.getGridSize()*board.getGridSize(); i++) {
             textViewsGrid.get(i).setText(" ");
             textViewsGrid.get(i).setClickable(true);
-            textViewsGrid.get(i).setTypeface(textViewsGrid.get(i).getTypeface(), Typeface.NORMAL);
+            textViewsGrid.get(i).setTextAppearance(R.style.normal);
         }
         for (int i = 0; i < board.getGridSize()*board.getGridSize(); i++) {
             int row = i / board.getGridSize();
             int col = i % board.getGridSize();
             if (board.getGrid()[row][col] != 0) {
                 textViewsGrid.get(i).setText(String.valueOf(board.getGrid()[row][col]));
-                textViewsGrid.get(i).setTypeface(textViewsGrid.get(i).getTypeface(), Typeface.BOLD);
+                textViewsGrid.get(i).setTextAppearance(R.style.bold);
                 textViewsGrid.get(i).setClickable(false);
             }
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public void initialize() {
         board = new Sudoku(9);
         board.createGame();
@@ -161,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
             int row = i / board.getGridSize();
             int col = i % board.getGridSize();
             if (board.getGrid()[row][col] != 0) {
-                textViewsGrid.get(i).setTypeface(textViewsGrid.get(i).getTypeface(), Typeface.BOLD);
+                textViewsGrid.get(i).setTextAppearance(R.style.bold);
                 textViewsGrid.get(i).setText(String.valueOf(board.getGrid()[row][col]));
                 textViewsGrid.get(i).setClickable(false);
             }

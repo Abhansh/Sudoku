@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bold" parent="@android:style/Widget.TextView">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="normal" parent="@android:style/Widget.TextView">
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>
